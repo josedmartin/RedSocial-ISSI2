@@ -1,0 +1,354 @@
+.icons{
+  width: 22px;
+  height: 22px;
+  margin-right: 2px;
+  display: inline-block;
+  margin-bottom: -6px;
+}
+
+.anclas{
+  text-decoration: none;
+  color: white;
+}
+
+/* Login/Register */
+
+.background {
+    /* Aquí el origen de la imagen */
+    background-image: url(/images/Fondo.png);
+  
+    /* Fijar la imagen de fondo este vertical y
+      horizontalmente y centrado */
+    background-position: center center;
+  
+    /* Esta imagen no debe de repetirse */
+    background-repeat: no-repeat;
+  
+    /* COn esta regla fijamos la imagen en la pantalla. */
+    background-attachment: fixed;
+  
+    /* La imagen ocupa el 100% y se reescala */
+    background-size: cover;
+  
+    /* Damos un color de fondo mientras la imagen está cargando  */
+    background-color: #464646;
+  }
+  
+.login{
+    background-color: white;
+    position: absolute;
+    text-align: center;
+    width: 360px; 
+    height: 380px;
+    top: 50%;
+    left: 50%;
+    margin-left: -180px;
+    margin-top: -200px;
+    padding: 10px 10px 10px;
+}
+
+.intputs{
+  width: 200px; 
+  height: 35px;
+  border-radius: 8px;
+  font-size:large;
+}
+
+.register{
+  background-color: white;
+    position: absolute;
+    text-align: center;
+    width: 360px; 
+    height: 580px;
+    top: 50%;
+    left: 50%;
+    margin-left: -180px;
+    margin-top: -300px;
+    padding: 10px 10px 10px;
+}
+
+/* BARRA DE NAVEGACIÓN */
+.cabecera{
+  height: 60px;
+  background: black;
+  display: flex;
+  padding: 0px 20px;
+}
+
+/*
+
+.menu-toggle{
+  display: none;
+  margin-left: auto;
+  color: white;
+  line-height: 60px;
+  font-size: 25px;
+  cursor:pointer;
+}
+
+*/
+.selectores{
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.logo a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-family:fantasy;
+
+}
+
+.logo a:hover{
+  color:white;
+  text-decoration: none;
+}
+
+#menu{
+  margin-left: auto;
+}
+
+#menu ul li{
+  display:inline-block;
+}
+
+#menu ul li a{
+  display: inline-block;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  line-height: 30px;
+  padding: 0px 8px;
+  text-transform: uppercase;
+  transition: .2s;
+}
+
+#menu ul li a:hover{
+  background: #E5E9F2;
+}
+
+.show{
+  height: 305px !important;
+}
+
+/*
+
+@media screen and (max-width:700px) {
+  .menu-toggle{
+    display: block;
+  }
+
+  #menu{
+    background: black;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .3s ease-out;
+  }
+
+  #menu ul li{
+    display: block;
+    text-align: center;
+  }
+
+  #menu ul li a{
+    color: white;
+    font-size: 20px;
+    border-bottom: 1px solid green;
+    width: 100%;
+  }
+
+  #menu ul li a:hover{
+    background: green;
+  }
+
+ 
+}
+ */
+
+
+/* Index */ 
+div.photo-block {
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #343F4B;
+  text-align: center;
+  margin: 0 15px;
+}
+
+div.gallery-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin-top: 25px;
+}
+
+img.photo-image {
+  max-width: 80%;
+  max-height: auto;
+  border-radius: 15px;
+
+}
+
+.profile-icon{
+  width: 22px;
+  height: 22px;
+  float: left;
+  margin-bottom: -10px;
+}
+
+.star-icon{
+  width: 26px;
+  height: 26px;
+  float: right;
+  
+  margin-bottom: -10px;
+}
+
+.users{
+  display: inline-block;
+  color:white;
+  font-size: 18px;
+  margin-right: 42%;
+}
+
+.follow{
+  display: inline-block;
+  color:white;
+  font-size: 18px;
+  opacity: 50%;
+}
+
+.category{
+  display: inline-block;
+  color:white;
+  font-size: 18px;
+  margin-right: 50%;
+  opacity: 70%;
+}
+
+.score{
+  display: inline-block;
+  color:white;
+  font-size: 18px;
+  font-family: fantasy;
+}
+
+/* Profiles */
+.big-profile{
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin-top: -10px;
+  margin-left: 20px;
+}
+
+.user-mail{
+  margin-left: 90px; 
+  margin-top: -20px;
+  color: #343F4B;
+  opacity: 80%;
+}
+
+#followingButton{
+  background-color: #969FAA; 
+  border: 1px solid black; 
+  width: 120px; 
+  height: 35px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.stats{
+  vertical-align: top;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: -20px;
+}
+
+#profileButton{
+  background-color: #4781D1; 
+  border: 1px solid white; 
+  color: white;
+  width: 240px; 
+  height: 35px;
+  margin-left: 10px;
+  display: inline-block;
+  border-radius: 4%;
+  cursor: pointer;
+}
+
+.padlock{
+  width: 30px;
+  height: 30px;
+}
+
+.delete{
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #F95F62;
+  text-align: center;
+  cursor: pointer;
+  color:white;
+}
+
+/* Post */
+.add-photo{
+  border: 3px dashed black;
+  height: 450px;
+  width: 400px;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 420px;
+  display: inline-block; 
+  margin-left: 50px;
+  font-size: 26px;
+  color: #969FAA;
+}
+
+.formulario{
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 26px;
+}
+
+.intputs-longtext{
+  width: 300px; 
+  height: 200px;
+  border-radius: 8px;
+  font-size:large;
+}
+
+/* photos */
+.comments{
+  width: 250px; 
+  height: 40px;
+  border-radius: 8px;
+  font-size:large;
+  display: inline-block;
+}
+.send{
+  width: 40px;
+  height: 40px;
+  margin-left: 2px;
+  display: inline-block;
+}
+.edit{
+  background-color: DodgerBlue;
+  border: none; 
+  color: white;
+  padding: 12px 16px; 
+  font-size: 16px;
+  cursor: pointer;
+}
+.edit:hover{
+  background-color: RoyalBlue;
+}

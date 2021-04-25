@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Post</title>        
+        <link rel="icon" href="/docs/images/general.ico">
+
+        <link rel="stylesheet" href="/css/style.css">
+
+        <link rel= "stylesheet" href="/css/font-awesome.min.css ">
+    
+        <script src="js/utils/include.js"></script>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <p style="margin-left: 20px;"> <img onclick="history.back()" style="cursor:pointer;" class="icons" src="/images/back.png" alt="back"></p>
+        <div class="container" style="display: grid; grid-template-columns: 40% 50%;"> 
+            
+            <div class="photo-block">
+                <div class="content" >
+                    <p class="users"> <a href="yourprofile.html" class="anclas">  <img class="profile-icon" src="/images/profile.png" alt="Profile"> Your.Username </a></p>
+                    <img class="padlock" src="/images/open-padlock.png" alt="private">
+                </div>
+
+                <a href="yourprofile.html">
+                <img class="photo-image" src="https://images.unsplash.com/photo-1619286149303-0eb97e7fbb1e?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMTh8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                alt="A artistic picture">
+                </a>
+    
+                <div class="content">
+                    <p class="category">Foto artistica</p>
+                    <p class="score"> <img class="star-icon" src="/images/star.png" alt="star"> 6.8</p>
+                </div>
+
+                <div class="delete">
+                    <p style="color: white;">DELETE THIS POST <img style="filter: invert(2);" class="icons" src="/images/delete.png" alt="delete"> </p>
+                </div>
+
+            </div>
+            
+
+            <div class="formulario">
+                <p>TITULO DE LA FOTO</p>
+                <p><textarea name="description" rows="10" cols="55" style="font-size: 16px;">Comments</textarea>
+                <p> 
+                    <input type="text" name="Name" placeholder="Leave your comment here!!" class="comments"> 
+                    <img style="margin-bottom: -10px; cursor: pointer;" class="send" src="/images/send.png" alt="send">
+                </p> 
+                <button type="button" class="edit">Edit this post <i class="fa fa-edit"></i></button>
+            </div>
+            
+
+        </div>
+        <script>
+            include("header.html", "#header");
+        </script>
+    </body>
+</html>

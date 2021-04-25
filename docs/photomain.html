@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Post</title>        
+        <link rel="icon" href="/docs/images/general.ico">
+
+        <link rel="stylesheet" href="/css/style.css">
+
+        <link rel= "stylesheet" href="/css/font-awesome.min.css ">
+    
+        <script src="js/utils/include.js"></script>
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <p style="margin-left: 20px;"> <img onclick="history.back()" style="cursor:pointer;" class="icons" src="/images/back.png" alt="back"></p>
+        <div class="container" style="display: grid; grid-template-columns: 40% 60%;"> 
+            
+            <div class="photo-block">
+                <div class="content">
+                <p class="users"> <a href="otherprofile.html" class="anclas"> <img class="profile-icon" src="/images/profile.png" alt="userprofile"> User.01 </a> </p>
+                <p class="follow">Following</p>
+                </div>
+
+                <img class="photo-image" src="https://images.unsplash.com/photo-1484353371297-d8cfd2895020?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                    alt="A picture of people">
+    
+                <div class="content">
+                    <p class="category">Animales</p>
+                    <p class="score"> <img class="star-icon" src="/images/star.png" alt="star"> 6.8</p>
+                </div>
+            </div>
+            
+
+            <div class="formulario">
+                <p>TITULO DE LA FOTO</p>
+                <p><textarea name="description" rows="10" cols="55" style="font-size: 16px;">Comments</textarea>
+                <p> 
+                    <input type="text" name="Name" placeholder="Leave your comment here!!" class="comments"> 
+                    <img style="margin-bottom: -10px; cursor: pointer;" class="send" src="/images/send.png" alt="send">
+                </p> 
+                <p>Deja tu valoración: 
+                    <select class="intputs" id="valorate" name="valorate">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </p>
+            </div>
+            
+
+        </div>
+        <script>
+            include("header.html", "#header");
+        </script>
+    </body>
+</html>
