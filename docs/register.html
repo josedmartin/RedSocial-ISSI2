@@ -3,7 +3,6 @@
     <head>
         <title>Register</title>
         <link rel="icon" href="/docs/images/general.ico">
-        
         <link rel="stylesheet" href="/css/style.css">
         
         <meta name= "viewport" content= "width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,34 +11,48 @@
         <script src= "/js/libs/jquery-3.4.1.min.js"></script>
         <script src= "/js/libs/popper.min.js"></script>
         <script src= "/js/libs/bootstrap.min.js"></script>
+        <script src="/js/libs/axios.min.js"></script>
+
+        <script src="/js/register.js" type="module"></script>
     </head>
 
     <body class="background">
         
+        
+
         <div class="register">
-        <form>
-            <p style="font-size: 35px; margin-bottom: 40px;"><strong>Sing up</strong></p>
 
-            <p><input type="text" name="Name" placeholder="Your name" class="intputs"></p>
+            <div style="position: absolute;" id="errors"></div>
+            
+            <form id="register-form">
+                <p style="font-size: 25px; margin-bottom: 20px;"><strong>Sing up</strong></p>
 
-            <p><input type="text" name="Surname" placeholder="Surname" class="intputs"></p>
+                <p><input type="text" name="firstName" placeholder="firstName" class="intputs" required></p>
+
+                <p><input type="text" name="lastName" placeholder="lastName" class="intputs" required></p>
+                    
+                <p><input type="text" name="username" placeholder="Username" class="intputs" required></p>
+        
+                <p><input type="number" name="telephone" placeholder="Phone Number" class="intputs" required></p>
+
+                <p><input type="text" name="avatarUrl" placeholder="URL of Profile Photo" class="intputs" required></p>
+
+                <p><input type="email" name="email" placeholder="Email" class="intputs" required></p>
                 
-            <p><input type="email" name="username" placeholder="Username" class="intputs"></p>
-    
-            <p><input type="number" name="phoneNumber" placeholder="Phone Number" class="intputs"></p>
+                <p><input type="password" name="password" placeholder="Password" class="intputs" required></p>
+                
+                <p><input type="password" name="password2" placeholder="Repeat Your Password" class="intputs" required></p>
 
-            <p><input type="email" name="email" placeholder="Email" class="intputs"></p>
-            
-            <p><input type="password" name="password" placeholder="Password" class="intputs"></p>
-            
-            <p><input type="password" name="repeatPassword" placeholder="Repeat Your Password" class="intputs"></p>
+                <input class="button-form" type="submit">
 
-            <a class="btn btn-primary" href="index.html" role="button"
-                style="background-color: black; border: none; margin-top: 20px;">Register</a>
-
-            <p style="font-size: 15px; color: #8190A5; opacity: 88%; margin-top: 20px;">
-                By signing up you agree to our Terms & Conditions</p>
-        </form>
+                <p style="font-size: 15px; color: #8190A5; opacity: 88%; margin-top: 20px;">
+                    By signing up you agree to our Terms & Conditions</p>
+                <p style="font-size: 15px; color: #343F4B; opacity: 88%; margin-top: 20px;">
+                    ¿Ya estás registrado?,
+                    <a href="login.html" style="color:#00A6FF; text-decoration:none;">haz click aquí</a>
+                    si ya lo estás.
+                </p>
+            </form>
         </div>
 
 

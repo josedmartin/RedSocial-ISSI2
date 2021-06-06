@@ -1,125 +1,50 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>IISSI Photo-Gallery</title>        
-        <link rel="icon" href="/docs/images/general.ico">
+        <title>IISSI Photo-Gallery</title>
         
+        <link rel="icon" href="/docs/images/favicon.ico">
         <link rel="stylesheet" href="/css/style.css">
-
         <script src="js/utils/include.js"></script>
+
+        <meta name= "viewport" content= "width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel= "stylesheet" href= "/css/bootstrap.min.css ">
+        <link rel= "stylesheet" href= "/css/font-awesome.min.css ">
+        <script src= "/js/libs/jquery-3.4.1.min.js"></script>
+        <script src= "/js/libs/popper.min.js"></script>
+        <script src= "/js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/axios.min.js"></script>
+
+        <script type="module" src="js/index.js"></script>
+        <script src="/js/header.js" type="module"></script>
+
     </head>
+
     <body>
         <div id="header"></div>
+
+        <div class="container" id="container">
+
+            <div class="content">
+                <p style="display: inline-block; font-size: 20px; 
+                margin-left: 20px; margin-top: 20px;">You're watching:</p>
         
-        <div class="content">
-        <p style="display: inline-block; font-size: 20px; 
-        margin-left: 20px; margin-top: 20px;">You're watching:</p>
-
-        <select style="display: inline-block; font-size: 18px;" id="categories" name="categories">
-            <option value="all">Todas las categorías</option>
-            <option value="people">Personas</option>
-            <option value="artistic">Fotos artísticas</option>
-            <option value="animals">Animales</option>
-            <option value="landscape">Paisajes</option>
-            <option value="modeling">Modelaje</option>
-        </select>
-        </div>
-
-        <div class="gallery-container">
-            <div class="photo-block">
-                <div class="content">
-                <p class="users"> <a href="otherprofile.html" class="anclas"> <img class="profile-icon" src="/images/profile.png" alt="userprofile"> User.01 </a> </p>
-                <p class="follow">Following</p>
-                </div>
-
-                <a href="photomain.html">
-                <img class="photo-image"  src="https://images.unsplash.com/photo-1484353371297-d8cfd2895020?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                    alt="A picture of people">
-                </a>
-    
-                <div class="content">
-                    <p class="category">Personas</p>
-                    <p class="score"> <img class="star-icon" src="/images/star.png" alt="star"> 6.8</p>
-                </div>
+                <select style="display: inline-block; font-size: 18px;" id="categories" name="categories">
+                    <option value="All">Todas las categorías</option>
+                    <option value="Food">Food</option>
+                    <option value="Animals">Animals</option>
+                    <option value="Cities">Cities</option>
+                    <option value="Landscapes">Landscapes</option>
+                </select>
+                <div id="errors"></div>
             </div>
         
-            <div class="photo-block">
-                <div class="content">
-                    <p class="users"> <img class="profile-icon" src="/images/profile.png" alt="userprofile"> User.01</p>
-                    <p class="follow">Following</p>
-                </div>
-    
-                <img class="photo-image" src="https://images.unsplash.com/photo-1619333097784-cb9ab9fc164a?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Nnx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                    alt="A picture of a turtle">
-    
-                <div class="content">
-                    <p class="category">Animales</p>
-                    <p class="score"> <img class="star-icon" src="/images/star.png" alt="star"> 6.8</p>
-                </div>
-            </div>
-    
-            <div class="photo-block">
-                <div class="content">
-                    <p class="users"> <img class="profile-icon" src="/images/profile.png" alt="userprofile"> User.01</p>
-                    <p class="follow">Following</p>
-                </div>
-    
-                <img class="photo-image" src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                    alt="A picture of people">
-    
-                <div class="content">
-                    <p class="category"> Personas</p>
-                    <p class="score"> <img class="star-icon" src="/images/star.png" alt="star"> 6.8</p>
-                </div>
+            <hr>
+
+            <div class="row" id="gallery">
+
             </div>
 
-        </div>
-        <div class="gallery-container">
-            <div class="photo-block">
-                <div class="content">
-                    <p class="users"> <img class="profile-icon" src="/images/profile.png" alt="userprofile"> User.01</p>
-                    <p class="follow">Following</p>
-                </div>
-
-                <img class="photo-image" src="https://images.unsplash.com/photo-1619267110184-798fa0240faf?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                    alt="A picture of showcase">
-    
-                <div class="content">
-                    <p class="category">Fotos artisticas</p>
-                    <p class="score"> <img class="star-icon" src="/images/star.png" alt="star"> 6.8</p>
-                </div>
-            </div>
-        
-            <div class="photo-block">
-                <div class="content">
-                    <p class="users"> <img class="profile-icon" src="/images/profile.png" alt="userprofile"> User.01</p>
-                    <p class="follow">Following</p>
-                </div>
-    
-                <img class="photo-image" src="https://images.unsplash.com/photo-1619241983196-aa2401255eb7?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5NHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                    alt="A picture of a landscape">
-    
-                <div class="content">
-                    <p class="category">Paisajes</p>
-                    <p class="score"> <img class="star-icon" src="/images/star.png" alt="star"> 6.8</p>
-                </div>
-            </div>
-    
-            <div class="photo-block">
-                <div class="content">
-                    <p class="users"> <img class="profile-icon" src="/images/profile.png" alt="userprofile"> User.01</p>
-                    <p class="follow">Following</p>
-                </div>
-    
-                <img class="photo-image" src="https://images.unsplash.com/photo-1619233450241-e3b85ff1547d?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMDZ8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                    alt="A picture of a people">
-    
-                <div class="content">
-                    <p class="category">Personas</p>
-                    <p class="score"> <img class="star-icon" src="/images/star.png" alt="star"> 6.8</p>
-                </div>
-            </div>
-        </div>
         <script>
             include("header.html", "#header");
         </script>

@@ -3,8 +3,8 @@
     <head>
         <title>Login In</title>
         <link rel="icon" href="/docs/images/general.ico">
-        
         <link rel="stylesheet" href="/css/style.css">
+        <script src="/js/login.js" type="module"></script>
 
         <meta name= "viewport" content= "width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel= "stylesheet" href="/css/bootstrap.min.css ">
@@ -12,24 +12,25 @@
         <script src= "/js/libs/jquery-3.4.1.min.js"></script>
         <script src= "/js/libs/popper.min.js"></script>
         <script src= "/js/libs/bootstrap.min.js"></script>
+        <script src="/js/libs/axios.min.js"></script>
     </head>
 
     <body class="background">
 
-        
+        <div id="errors"></div>
+
         <div class="login">
-        <form>
+        <form id="login-form" >
             <p style="font-size: 25px;"><strong>Login in</strong></p>
 
             <p style="margin-top: -20px; margin-bottom: 20px; color: #8190A5; opacity: 88%; font-size: 20px">
                 Hola! Encantado de volver a verte.</p>
 
-            <p><input type="email" name="username" placeholder="Username" style="margin-top: 10px; margin-bottom: 10px;" class="intputs"></p>
+            <p><input id="username-input" type="text" name="username" placeholder="Username" style="margin-top: 10px; margin-bottom: 10px;" class="intputs" required></p>
 
-            <p><input type="password" name="password" placeholder="Password" class="intputs"></p>
+            <p><input id="password-input" type="password" name="password" placeholder="Password" class="intputs" required></p>
 
-            <a class="btn btn-primary" href="index.html" role="button"
-                style="background-color: black; border: none; margin-top: 20px;">Login in</a>
+            <input class="button-form" type="submit">
 
             <p style="font-size: 18px; color: #343F4B; opacity: 88%; margin-top: 20px;">
                 ¿No estas registrado? No es problema, 

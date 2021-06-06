@@ -1,26 +1,27 @@
-<!DOCTYPE html>
-<head>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<div class="cabecera">
-    <div class="logo">
-        <a href="index.html"><em>IISSI PHOTO-GALLERY</em></a>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a style="font-family: fantasy;" class="navbar-brand" href="index.html">IISSI Photo-Gallery</a>
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <nav id = "menu">
-        <ul class="content">
-            <li class="selectores"><a href="trending.html"> <img class="icons" src="/images/trending.png" alt="Trending-Logo"> Trending</a></li>
-            <li class="selectores"><a href="index.html"> <img class="icons" style="filter: invert(2);" src="/images/home.png" alt="home"> Home</a></li>
-            <li class="selectores"><a href="login.html"> <img class="icons" style="filter: invert(2);" src="/images/disconnect.png" alt="disconnect"> Disconnect</a></li>
-            <li class="selectores"><a href="post.html"> <img class="icons" style="filter: invert(2);" src="/images/post.png" alt="post"> Post</a></li>
-            <li class="selectores"><a href="yourprofile.html"> <img class="icons" style="filter: invert(2);" src="/images/user.png" alt="user"> Your Profile</a></li>
-
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a id="header-login" class="nav-link" href="login.html"> <img class="bar-icons" style="filter: invert(2);" src="/images/login.png" alt="login"> Login</a>
+            </li>
+            <li class="nav-item">
+                <a id="header-logout" class="nav-link" href="#"> <img class="bar-icons" style="filter: invert(2);" src="/images/logout.png" alt="logout"> Logout</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="trending.html"> <img class="bar-icons" src="/images/trending.png" alt="Trending-Logo"> Trending</a>
+            </li>
+            <li class="nav-item">
+                <a id="header-create-photo" class="nav-link" href="post.html"> <img class="bar-icons" style="filter: invert(2);" src="/images/post.png" alt="post"> Post</a>
+            </li>
+            <li class="nav-item">
+                <a id="header-username" class="nav-link" href="#"> <img class="bar-icons" style="filter: invert(2);" src="/images/user.png" alt="user"> Your Profile</a>
+            </li>
         </ul>
-    </nav>
-    <!--
-    <div class="menu-toggle">
-        <i class="fa fa-bars"></i>
     </div>
-    -->    
-</div>
-
+</nav>

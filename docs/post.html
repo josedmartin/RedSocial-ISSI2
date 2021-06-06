@@ -3,37 +3,54 @@
     <head>
         <title>Post</title>        
         <link rel="icon" href="/docs/images/general.ico">
-
         <link rel="stylesheet" href="/css/style.css">
-    
         <script src="js/utils/include.js"></script>
+        <script src="/js/header.js" type="module"></script>
+        <script src="/js/post.js" type="module"></script>
+
+        <meta name= "viewport" content= "width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel= "stylesheet" href= "/css/bootstrap.min.css ">
+        <link rel= "stylesheet" href= "/css/font-awesome.min.css ">
+        <script src= "/js/libs/jquery-3.4.1.min.js"></script>
+        <script src= "/js/libs/popper.min.js"></script>
+        <script src= "/js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/axios.min.js"></script>
+
     </head>
     <body>
         <div id="header"></div>
 
-        <p style="font-size: 26px; margin-left: 20px;">Creando un nuevo post...</p>
-        <div class="container" style="display: grid; grid-template-columns: 50% 50%;"> 
-            <div class="add-photo">
-                <p style="cursor: pointer;" >Añadir foto desde tus archivos</p>
+        <div class="container" id="container"> 
+            
+            <div class="row text-center">
+                <div class="col-md">
+                    <h1 id="page-title" style="margin-top: 20px;">Creating a photo</h1>
+                    <div id="errors"></div>
+                </div>
             </div>
 
-            <div class="formulario">
-                <p>*Titulo: <input class="intputs" type="text" name="title" placeholder="Title"> </input></p>
-                <p>*Añadir categoria: <input class="intputs" type="text" name="category" placeholder="Category"> </p>
-                <p>*Fecha de subida: <input class="intputs" type="date" name="date"> </p>
+            <form style="margin-top: 20px;" id="form-upload-photo" class="formulario">
+                <p>*Titulo: <input id="input-title" class="intputs" type="text" 
+                        name="title" placeholder="Title" required> </input></p>
+                <p>*Breve descripción:<input id="input-description" class="intputs" type="text" name="description" placeholder="Description" required></p>
+                <p>*URL: <input id="input-url" class="intputs" type="text" name="url" placeholder="Image URL" required> </p>
                 <p>*Visibilidad: 
-                    <select class="intputs" id="visibility" name="visibility">
-                    <option value="private">Private</option>
-                    <option value="public">Public</option>
-                    </select>
+                    <select name="visibility" id="input-visibility">
+                        <option value="Public">Public</option>
+                        <option value="Private">Private</option>
+                    </select> 
                 </p>
-                <p>*Breve descripción:<textarea name="description" rows="10" cols="40" style="font-size: 16px;">Escribe aqui...</textarea>
-            </div>
-            <p style="font-size: 20px; margin-left: 20px;" ><b>Revise antes de usar el botón de subida 
-                de que todas los campos anteriores requeridos(*) estén rellenos correctamente.</b></p>
-            <p><input type="button" name="upload_picture" value="Upload" style="width: 210px; height: 45px; 
-                 font-size: 25px; border-radius: 8px; cursor: pointer;"></p>
+
             
+                <p style="font-size: 18px; margin-left: 20px;" ><b>Revise antes de usar el botón de subida 
+                    de que todas los campos anteriores requeridos(*) estén rellenos correctamente.</b></p>
+                
+                <div class="row">
+                    <div class="col-md text-center">
+                        <input class="button-form" type="submit">
+                    </div>
+                </div>
+            </form>
 
         </div>
         <script>
